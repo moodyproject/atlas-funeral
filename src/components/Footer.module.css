@@ -1,0 +1,202 @@
+.footer {
+  background: #0f0f1a;
+  color: #ffffff;
+  padding: 100px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 300px;
+  background: radial-gradient(ellipse, rgba(201, 169, 110, 0.04), transparent);
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.ctaSection {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.heading {
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 520px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* ── Form Card ── */
+.formCard {
+  width: 100%;
+  max-width: 640px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(201, 169, 110, 0.1);
+  border-radius: 20px;
+  padding: 48px 44px;
+  margin-bottom: 80px;
+}
+
+.formHeading {
+  font-size: 1.3rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 32px;
+  letter-spacing: -0.01em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(201, 169, 110, 0.1);
+  border-radius: 10px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  outline: none;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--gold);
+  background: rgba(201, 169, 110, 0.04);
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* ── Bottom ── */
+.bottom {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 40px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 5px;
+}
+
+.tagline {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.links {
+  display: flex;
+  gap: 32px;
+}
+
+.links a {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s;
+  font-weight: 500;
+}
+
+.links a:hover {
+  color: var(--gold);
+}
+
+.copy {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 48px 0 0;
+  }
+
+  .ctaSection {
+    padding: 0 20px;
+    margin-bottom: 32px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .sub {
+    font-size: 0.95rem;
+  }
+
+  .formCard {
+    padding: 32px 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: auto;
+  }
+
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 32px 20px;
+  }
+
+  .links {
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

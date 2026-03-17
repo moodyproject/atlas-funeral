@@ -1,0 +1,280 @@
+.section {
+  padding: 100px 0;
+  background: var(--off-white);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.heading {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.body {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 40px 36px;
+  transition: all 0.4s var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardIcon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(201, 169, 110, 0.1), rgba(201, 169, 110, 0.05));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 16px;
+}
+
+.cardHeading {
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.blackWord {
+  color: var(--navy);
+}
+
+.cardBody {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--charcoal);
+}
+
+/* ── Carousel ── */
+.carouselSection {
+  margin-top: 100px;
+}
+
+.carouselHeading {
+  font-size: 1.6rem;
+  color: var(--navy);
+  text-align: center;
+  margin-bottom: 28px;
+  letter-spacing: -0.01em;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carouselFadeLeft,
+.carouselFadeRight {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.carouselFadeLeft {
+  left: 0;
+  background: linear-gradient(90deg, var(--off-white), transparent);
+}
+
+.carouselFadeRight {
+  right: 0;
+  background: linear-gradient(270deg, var(--off-white), transparent);
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 20px;
+  animation: scroll 140s linear infinite;
+  width: max-content;
+  padding: 8px 0 24px;
+}
+
+.carouselTrack:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.agentCard {
+  flex: 0 0 240px;
+  background: var(--white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 14px;
+  padding: 28px 24px;
+  transition: all 0.35s var(--ease-out-expo);
+  position: relative;
+  overflow: hidden;
+}
+
+.agentCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light));
+  opacity: 0;
+  transition: opacity 0.35s;
+}
+
+.agentCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+  border-color: transparent;
+}
+
+.agentCard:hover::before {
+  opacity: 1;
+}
+
+.agentIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, rgba(201, 169, 110, 0.12), rgba(201, 169, 110, 0.04));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-bottom: 16px;
+}
+
+.agentName {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--navy);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.agentDesc {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 48px 0;
+    overflow-x: hidden;
+  }
+
+  .header {
+    margin-bottom: 32px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    min-width: 0;
+  }
+
+  .card {
+    padding: 24px 20px;
+    min-width: 0;
+  }
+
+  .cardHeading {
+    font-size: 1.2rem;
+  }
+
+  .cardBody {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .carouselSection {
+    margin-top: 56px;
+  }
+
+  .carouselHeading {
+    font-size: 1.2rem;
+    padding: 0 20px;
+    margin-bottom: 20px;
+  }
+
+  .carouselTrack {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .agentCard {
+    flex: 0 0 200px;
+    padding: 22px 18px;
+  }
+
+  .agentName {
+    font-size: 0.9rem;
+  }
+
+  .agentDesc {
+    font-size: 0.8rem;
+  }
+
+  .carouselFadeLeft,
+  .carouselFadeRight {
+    width: 40px;
+  }
+}

@@ -1,0 +1,249 @@
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--navy);
+  overflow: hidden;
+}
+
+.trustBarWrap {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  margin-top: auto;
+}
+
+/* ── Animated background ── */
+.bg {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.gradientOrb1 {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.08) 0%, transparent 70%);
+  top: -20%;
+  right: -10%;
+  animation: float1 20s ease-in-out infinite;
+}
+
+.gradientOrb2 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201, 169, 110, 0.06) 0%, transparent 70%);
+  bottom: -10%;
+  left: -5%;
+  animation: float2 25s ease-in-out infinite;
+}
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(201, 169, 110, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201, 169, 110, 0.03) 1px, transparent 1px);
+  background-size: 80px 80px;
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 50%, black 20%, transparent 70%);
+}
+
+@keyframes float1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-30px, 20px) scale(1.05); }
+  66% { transform: translate(20px, -30px) scale(0.95); }
+}
+
+@keyframes float2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -20px) scale(1.05); }
+  66% { transform: translate(-20px, 30px) scale(0.95); }
+}
+
+/* ── Globe ── */
+.globe {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Content ── */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 160px 24px 120px;
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+  position: relative;
+  display: inline-block;
+}
+
+.label::before,
+.label::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.label::before {
+  right: calc(100% + 16px);
+}
+
+.label::after {
+  left: calc(100% + 16px);
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.heading {
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  color: #ffffff;
+  margin-bottom: 28px;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wordWrap {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 4px;
+}
+
+.word {
+  display: inline-block;
+  transform: translateY(110%);
+  will-change: transform;
+}
+
+.sub {
+  font-family: var(--font-heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  color: var(--gold-light);
+  font-style: italic;
+  margin-bottom: 24px;
+  font-weight: 400;
+}
+
+.body {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 540px;
+  margin: 0 auto 48px;
+  line-height: 1.8;
+}
+
+.cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ── Scroll hint ── */
+.scrollHint {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 48px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0.4; transform: scaleY(0.6); }
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .content {
+    padding: 120px 20px 60px;
+  }
+
+  .heading {
+    font-size: clamp(2rem, 8vw, 2.8rem);
+    margin-bottom: 20px;
+  }
+
+  .sub {
+    font-size: 1rem;
+    margin-bottom: 16px;
+  }
+
+  .body {
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .label {
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+  }
+
+  .label::before,
+  .label::after {
+    display: none;
+  }
+
+  .gradientOrb1 {
+    width: 400px;
+    height: 400px;
+  }
+
+  .gradientOrb2 {
+    width: 300px;
+    height: 300px;
+  }
+
+  .globe {
+    opacity: 0.3;
+  }
+
+  .trustBarWrap {
+    margin-top: 40px;
+  }
+
+  .scrollHint {
+    display: none;
+  }
+}
