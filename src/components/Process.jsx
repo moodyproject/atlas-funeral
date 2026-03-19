@@ -6,7 +6,7 @@ import styles from './Process.module.css'
 const steps = [
   {
     title: 'Audit & Strategy',
-    desc: 'We audit your current presence, identify gaps in your market, and build a custom strategy tailored to your funeral home.',
+    desc: 'We audit your current presence, identify gaps in your market, and build a custom strategy tailored to your business.',
   },
   {
     title: 'Build & Execute',

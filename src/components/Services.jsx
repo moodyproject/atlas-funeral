@@ -6,19 +6,19 @@ import styles from './Services.module.css'
 const services = [
   {
     title: 'AI Receptionist',
-    desc: 'Never miss a call. Our 24/7 AI receptionist answers every call, handles family inquiries, and schedules arrangements automatically.',
+    desc: 'Never miss a call. Our 24/7 AI receptionist answers every call, handles customer inquiries, and schedules appointments automatically.',
     stat: '24/7',
     statLabel: 'Availability',
   },
   {
     title: 'Search Engine Optimization',
-    desc: 'Dominate Google when families search for funeral homes in your area. Our proven SEO strategies put you at the top.',
+    desc: 'Dominate Google when customers search for businesses like yours. Our proven SEO strategies put you at the top.',
     stat: '#1',
     statLabel: 'Page Rankings',
   },
   {
     title: 'Website Design',
-    desc: 'Premium, dignified websites that reflect the quality of your services and convert visitors into calls.',
+    desc: 'Premium websites that reflect the quality of your brand and convert visitors into customers.',
     stat: '3x',
     statLabel: 'More Conversions',
   },
@@ -62,10 +62,10 @@ export default function Services() {
         <div ref={headerRef} className={styles.header}>
           <p className="section-label">WHAT WE DO</p>
           <h2 className="section-heading" style={{ color: '#ffffff' }}>
-            Full-Service Funeral Home <span className="gradient-text">Marketing</span>
+            Full-Service Local Business <span className="gradient-text">Marketing</span>
           </h2>
           <p className="section-body" style={{ color: 'rgba(255, 255, 255, 0.7)', margin: '0 auto' }}>
-            Everything your funeral home needs to grow, under one roof.
+            Everything your business needs to grow, under one roof.
           </p>
         </div>
         <div ref={ref} className={styles.grid}>

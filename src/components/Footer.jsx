@@ -32,7 +32,7 @@ export default function Footer() {
         <div ref={ctaRef} className={styles.ctaSection}>
           <p className="section-label" style={{ display: 'block', textAlign: 'center' }}>GET STARTED</p>
           <h2 className={styles.heading} style={{ color: '#ffffff' }}>
-            Ready to Grow Your <span className="gradient-text">Funeral Home?</span>
+            Ready to Grow Your <span className="gradient-text">Business?</span>
           </h2>
           <p className={styles.sub} style={{ color: 'rgba(255,255,255,0.8)' }}>
             Apply for a free consultation. We'll audit your current marketing
@@ -48,10 +48,10 @@ export default function Footer() {
               <input type="email" placeholder="Email Address" className={styles.input} />
             </div>
             <div className={styles.formRow}>
-              <input type="text" placeholder="Funeral Home Name" className={styles.input} />
+              <input type="text" placeholder="Business Name" className={styles.input} />
               <input type="tel" placeholder="Phone Number" className={styles.input} />
             </div>
-            <textarea placeholder="Tell us about your funeral home..." className={styles.textarea} rows={4} />
+            <textarea placeholder="Tell us about your business..." className={styles.textarea} rows={4} />
             <button type="submit" className="cta-btn" style={{ width: '100%', textAlign: 'center' }}>
               <span>Submit Application</span>
             </button>
@@ -61,7 +61,7 @@ export default function Footer() {
         <div className={styles.bottom}>
           <div className={styles.brand}>
             <span className={styles.logo}>ATLAS</span>
-            <p className={styles.tagline}>America's Leading Funeral Home Marketing Agency</p>
+            <p className={styles.tagline}>Websites, AI & Software for Local Business</p>
           </div>
           <nav className={styles.links}>
             <a href="#">Home</a>

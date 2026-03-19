@@ -72,10 +72,10 @@ export default function Nationwide() {
         <div className={styles.inner}>
           <p className="section-label">NATIONWIDE COVERAGE</p>
           <h2 className="section-heading">
-            Funeral Home Marketing That <span className="gradient-text">Fills Your Calendar</span>
+            Digital Marketing That <span className="gradient-text">Fills Your Calendar</span>
           </h2>
           <p className={`section-body ${styles.bodyText}`} style={{ margin: '0 auto 56px', textAlign: 'center' }}>
-            From coast to coast, we help funeral homes dominate their local markets.
+            From coast to coast, we help local businesses dominate their local markets.
             Our strategies are tailored to your specific region, competition, and community.
           </p>
 
@@ -93,7 +93,7 @@ export default function Nationwide() {
               ))}
             </div>
             <p className={styles.mapLabel}>
-              Serving funeral homes in <strong>15+ states</strong> and growing
+              Serving businesses in <strong>15+ states</strong> and growing
             </p>
           </div>
         </div>

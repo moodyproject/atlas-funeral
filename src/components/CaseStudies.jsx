@@ -5,19 +5,19 @@ import styles from './CaseStudies.module.css'
 
 const cases = [
   {
-    name: 'Heritage Memorial',
+    name: 'Bella Cucina',
     stat: '85%',
     desc: 'increase in monthly calls',
     detail: 'SEO + Google Ads strategy delivered consistent lead flow within 90 days.',
   },
   {
-    name: 'Peaceful Rest',
+    name: 'Summit Law',
     stat: '$50K',
     desc: 'per year saved on staffing',
     detail: 'AI Receptionist handles after-hours calls and schedules arrangements automatically.',
   },
   {
-    name: 'Golden Gate',
+    name: 'Harbor Fitness',
     stat: '3x',
     desc: 'more Google visibility',
     detail: 'From page 3 to the top 3 organic results in 6 months.',
@@ -100,7 +100,7 @@ export default function CaseStudies() {
         <div ref={headerRef} className={styles.header}>
           <p className="section-label">RESULTS</p>
           <h2 className="section-heading" style={{ color: '#ffffff' }}>
-            Real Results for <span className="gradient-text">Real Funeral Homes</span>
+            Real Results for <span className="gradient-text">Real Businesses</span>
           </h2>
           <p className="section-body" style={{ color: 'rgba(255,255,255,0.75)', margin: '0 auto', textAlign: 'center' }}>
             Numbers don't lie. Here's what happens when you partner with Atlas.

@@ -52,14 +52,14 @@ export default function Hero({ loaded }) {
       </Suspense>
 
       <div className={`container ${styles.content}`}>
-        <p className={styles.label}>ATLAS FUNERAL HOME MARKETING</p>
+        <p className={styles.label}>WEBSITES & AI FOR LOCAL BUSINESS</p>
         <h1 className={styles.heading}>
-          America's Leading Funeral Home Marketing Agency
+          The Digital Agency That Grows Local Businesses
         </h1>
-        <p className={styles.sub}>We grow and scale funeral home businesses</p>
+        <p className={styles.sub}>Websites, AI agents, SEO & custom software</p>
         <p className={styles.body}>
-          We deliver all-inclusive marketing systems for funeral homes.
-          You focus on serving families. We handle everything else.
+          We deliver all-inclusive digital systems for local businesses.
+          You focus on running your business. We handle everything else.
         </p>
         <div className={styles.cta}>
           <a href="#contact" className="cta-btn"><span>Book Your Call</span></a>

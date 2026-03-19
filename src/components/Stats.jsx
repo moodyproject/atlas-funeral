@@ -3,7 +3,7 @@ import gsap from 'gsap'
 import styles from './Stats.module.css'
 
 const stats = [
-  { value: 50, suffix: '+', label: 'Funeral Homes Served' },
+  { value: 50, suffix: '+', label: 'Businesses Served' },
   { value: 15, suffix: '+', label: 'States Covered' },
   { value: 2, prefix: '$', suffix: 'M+', label: 'In Additional Revenue Generated' },
   { value: 98, suffix: '%', label: 'Client Retention Rate' },

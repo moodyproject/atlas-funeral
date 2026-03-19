@@ -4,12 +4,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import styles from './Testimonials.module.css'
 
 const testimonials = [
-  { name: 'Heritage Memorial Chapel', quote: 'Atlas completely transformed our online presence. We went from invisible to dominating page one in 4 months.', role: 'Director', initials: 'HM' },
-  { name: 'Peaceful Rest Funeral Home', quote: 'The AI receptionist alone paid for the entire service. We never miss a call now, even at 2am.', role: 'Owner', initials: 'PR' },
-  { name: 'Golden Gate Memorial', quote: 'Finally a marketing team that understands funeral homes. The results speak for themselves.', role: 'General Manager', initials: 'GG' },
-  { name: 'Evergreen Services', quote: 'Our monthly arrangements increased by 40% in the first six months. Incredible ROI.', role: 'Operations Director', initials: 'ES' },
-  { name: 'Dignity First Funeral Home', quote: 'Professional, responsive, and they actually deliver. Atlas is the real deal.', role: 'Owner', initials: 'DF' },
-  { name: 'Sunrise Memorial Chapel', quote: 'We stopped worrying about marketing and started focusing on families again. Atlas handles everything.', role: 'Director', initials: 'SM' },
+  { name: 'Bella Cucina Restaurant', quote: 'Atlas completely transformed our online presence. We went from invisible to dominating page one in 4 months.', role: 'Owner', initials: 'BC' },
+  { name: 'Summit Law Group', quote: 'The AI receptionist alone paid for the entire service. We never miss a call now, even at 2am.', role: 'Managing Partner', initials: 'SL' },
+  { name: 'Bright Smile Dental', quote: 'Finally a marketing team that understands local business. The results speak for themselves.', role: 'Practice Owner', initials: 'BS' },
+  { name: 'Harbor Fitness', quote: 'Our monthly memberships increased by 40% in the first six months. Incredible ROI.', role: 'Operations Director', initials: 'HF' },
+  { name: 'Prestige Auto Care', quote: 'Professional, responsive, and they actually deliver. Atlas is the real deal.', role: 'Owner', initials: 'PA' },
+  { name: 'Peak Plumbing Co', quote: 'We stopped worrying about marketing and started focusing on our customers again. Atlas handles everything.', role: 'Founder', initials: 'PP' },
 ]
 
 export default function Testimonials() {
@@ -42,7 +42,7 @@ export default function Testimonials() {
       <div className="container">
         <p className="section-label" style={{ textAlign: 'center', display: 'block' }}>TESTIMONIALS</p>
         <h2 className="section-heading" style={{ textAlign: 'center', color: '#ffffff' }}>
-          Trusted by Funeral Homes <span className="gradient-text">Across America</span>
+          Trusted by Businesses <span className="gradient-text">Across America</span>
         </h2>
       </div>
       <div className={styles.trackWrap}>

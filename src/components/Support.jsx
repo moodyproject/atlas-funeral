@@ -6,7 +6,7 @@ import styles from './Support.module.css'
 const features = [
   {
     title: 'Dedicated Account Manager',
-    desc: 'A single point of contact who knows your funeral home inside and out.',
+    desc: 'A single point of contact who knows your business inside and out.',
   },
   {
     title: 'Same-Day Response',
